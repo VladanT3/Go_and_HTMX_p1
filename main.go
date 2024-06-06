@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-    http.HandleFunc("/", MyHandler)
+    http.HandleFunc("/", HomePageHandler)
+    http.HandleFunc("/add-film/", AddFilmHandler)
 
     log.Fatal(http.ListenAndServe(":8000", nil))
 }
